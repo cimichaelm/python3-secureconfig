@@ -146,8 +146,8 @@ class EnvCryptKeeper(CryptKeeper):
 
     def store(self):
         'store currently active key into environment variable'
-        os.environ[self.env] = self.key
-        os.putenv(self.env, self.key)
+        os.environ[self.env] = self.key.decode()
+        os.putenv(self.env, self.key.decode())
 
     def load(self):
         'retrieve key from environment variable'
