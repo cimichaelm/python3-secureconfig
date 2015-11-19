@@ -1,11 +1,11 @@
-from __future__ import print_function, absolute_import
+
 
 import sys
 
 import cryptography
 
 from .baseclass import cryptkeeper_access_methods
-from ConfigParser import ConfigParser, NoSectionError, NoOptionError
+from configparser import ConfigParser, NoSectionError, NoOptionError
 
 
 # SECURECONFIG pattern:

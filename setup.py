@@ -23,7 +23,7 @@ class sdist(_sdist):
     def run(self):
         # Make sure the compiled Cython files in the distribution are up-to-date
         from Cython.Build import cythonize
-        print "cythonizing..."
+        print("cythonizing...")
         cythonize(['cython/mycythonmodule.pyx'])
         _sdist.run(self)
 cmdclass['sdist'] = sdist
@@ -31,14 +31,14 @@ cmdclass['sdist'] = sdist
 if use_cython:
     ext_modules += [ Extension('secureconfig.zeromem', sources=['secureconfig/zeromem.pyx']), ]
     cmdclass.update({ 'build_ext': build_ext })
-    print cmdclass
+    print(cmdclass)
 else:
     ext_modules += [ Extension('secureconfig.zeromem', sources=['secureconfig/zeromem.c']), ]
 
 
 setup (
     name = "secureconfig",
-    version = "0.1.2",
+    version = "0.1.2c",
     description = "Configuration-oriented encryption toolkit to make secure config files simple",
     url="https://bitbucket.org/nthmost/python-secureconfig",
     author = "Naomi Most",
@@ -50,6 +50,6 @@ setup (
     license = "MIT",
     zip_safe = True,
     packages = find_packages(),
-    install_requires = [ 'cryptography', 'configparser' ],
+    install_requires = [ 'cryptography' ],
     )
 

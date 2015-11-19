@@ -1,6 +1,6 @@
 from json import dumps, loads
 
-from baseclass import SecureConfig
+from .baseclass import SecureConfig
 
 __doc__ = '''SecureJson class for simplifying load of encrypted config files.
 
@@ -59,11 +59,11 @@ if __name__=='__main__':
 
     sjson.cfg['wet blanket'] = 'the fish'
 
-    print sjson
+    print(sjson)
     
     sjson.write("test_securejson.json.enc")
 
     newjson = SecureJson(filepath="test_securejson.json.enc", keyloc=".keys", readonly=True)
-    print newjson.cfg
+    print(newjson.cfg)
     
 
