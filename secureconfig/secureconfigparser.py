@@ -49,7 +49,7 @@ class SecureConfigParser(ConfigParser, cryptkeeper_access_methods):
     def raw_get(self, sec, key, default=None):
         '''Get the raw value without decoding it.'''
         try:
-            return ConfigParser.get(self, sec, key)
+            return ConfigParser.get(self, sec, key, raw=True)
             #return super(SecureConfigParser, self).get(sec, key)
         except (NoSectionError, NoOptionError):
             return default
