@@ -8,6 +8,11 @@ You are welcome to use it but there is no active development at this time.
 Pull requests for bug fixes are welcome.
 
 
+See https://github.com/nthmost/python-secureconfig for the
+official version.
+
+
+
 
 
 
